@@ -25,7 +25,6 @@ const authSlice = createSlice({
       .addCase(refreshUser.pending, reducer.refreshUserPending)
       .addCase(refreshUser.fulfilled, reducer.refreshUserFulfilled)
       .addCase(refreshUser.rejected, reducer.refreshUserRejected)
-
       .addMatcher(isAnyOf(...getActions('fulfilled')), reducer.anyFulfilled)
       .addMatcher(isAnyOf(...getActions('pending')), reducer.anyPending)
       .addMatcher(isAnyOf(...getActions('rejected')), reducer.anyRejected),
